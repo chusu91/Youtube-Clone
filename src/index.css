@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,7 +8,16 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  width:100vw;
+  height: 100vh;
+  @apply flex flex-col items-center;
+  @apply bg-zinc-900 text-gray-50;
 }
+
+#root {
+  @apply w-full max-w-screen-2xl
+}
+/* above, 화면 작을 때 꽉 차있지만, 스크린이 너무커지면 최대너비까지만 늘어나고 더이상 넓어지지 않아 */
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
