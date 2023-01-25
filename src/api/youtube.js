@@ -7,6 +7,25 @@ export class Youtube {
     return keyword ? this.#searchBykeyword(keyword) : this.#popularVideos();
   }
 
+  async channelImgURL(id) {
+    return this.apiClient
+      .channels({ params: { part: "snippet", id } })
+      .then((res) => res.data.items[0].snippet.thumbnails.default.url);
+  }
+
+  async related(id) {
+    return this.apiClient
+      .search({
+        params: {
+          part: "snippet",
+          relatedToVideoId: id,
+          type: "video",
+        },
+      })
+      .then((res) => res.data.items)
+      .then((items) => items.map((item) => ({ ...item, id: item.id.videoId })));
+  }
+
   async #searchBykeyword(keyword) {
     return this.apiClient
       .search({
