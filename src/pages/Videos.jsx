@@ -1,16 +1,12 @@
 import { useQuery } from "@tanstack/react-query";
-import axios from "axios";
 import React from "react";
 import { useParams } from "react-router-dom";
-import { FakeYoutube } from "../api/fakeYoutube";
-import { search, Youtube } from "../api/youtube";
 import VideoCard from "../components/VideoCard";
-import Error from "./Error";
+import { useYoutubeApi } from "../context/youtubeApiContext";
 
 export default function Videos() {
   const { keyword } = useParams();
-  const youtube = new FakeYoutube();
-  //const youtube = new Youtube();
+  const { youtube } = useYoutubeApi();
   const {
     isLoading,
     error,
