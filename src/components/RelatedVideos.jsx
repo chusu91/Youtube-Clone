@@ -9,7 +9,7 @@ export default function RelatedVideos({ id }) {
     isLoading,
     error,
     data: videos,
-  } = useQuery(["related", id], () => youtube.search(id), {
+  } = useQuery(["related", id], () => youtube.related(id), {
     staleTime: 1000 * 60 * 5,
   });
   return (
