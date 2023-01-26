@@ -16,7 +16,7 @@ export default function VideoDetail() {
           type="text/html"
           width="640"
           height="390"
-          src={`http://www.youtube.com/embed/${video.id}`}
+          src={`https://www.youtube.com/embed/${video.id}`}
           frameBorder="0"
           title={title}
         ></iframe>
