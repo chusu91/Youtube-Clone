@@ -9,7 +9,15 @@ https://extraordinary-lollipop-fb77fb.netlify.app
 
 ## Getting Started
 
-### `npm start`
+
+1. Install NPM packages
+   ```sh
+   npm install
+   ```
+2. Run the app
+   ```sh
+   npm start
+   ```
 
 # Screenshots
 <img width="1344" alt="netflix clone" src="https://user-images.githubusercontent.com/79313766/214840581-b9feb448-0109-4712-9027-986ce3e988e8.png">
