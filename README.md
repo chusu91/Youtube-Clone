@@ -6,8 +6,8 @@
 
 ## About The Project
 
-The Website shows popular video list in the main page.
-When you search with keyword, it will shows the keyword related video list.
+The Website shows popular video list in the main page. </br>
+When you search with keyword, it will shows the keyword related video list.</br>
 When you click the video card, it will show the video detail pages which can play the video and shows the related video list as well. 
 
 ## Visit and watch some videos 😉
